@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:realestate/screens/pages/detail_screen.dart';
-
 import '../constants/mycolors.dart';
+import 'detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -39,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Padding(
               padding:
-              const EdgeInsets.symmetric(horizontal: 17.0, vertical: 30.0),
+                  const EdgeInsets.symmetric(horizontal: 17.0, vertical: 30.0),
               child: SizedBox(
                 height: 60,
                 child: TextFormField(
@@ -518,7 +517,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       Stack(
                         children: [
                           InkWell(
-                            onTap: (){},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const DetailScreen()));
+                            },
                             child: Container(
                               height: 170,
                               width: 320,
