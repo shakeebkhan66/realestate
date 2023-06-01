@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:realestate/screens/pages/first_screen.dart';
+import 'package:realestate/screens/pages/settings_screen.dart';
 import 'package:realestate/screens/pages/splash_screen.dart';
-
-import 'screens/pages/welcome_screen.dart';
+import 'package:realestate/screens/pages/whishlist.dart';
 
 void main() {
   runApp(const MyApp());

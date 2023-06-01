@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:realestate/screens/pages/whishlist.dart';
 import '../constants/mycolors.dart';
 import 'detail_screen.dart';
 
@@ -553,16 +554,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Stack(
                         children: [
-                          Container(
-                            height: 170,
-                            width: 320,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12.0),
-                                image: const DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image: NetworkImage(
-                                      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-                                    ))),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const WhishlistScreen()));
+                            },
+                            child: Container(
+                              height: 170,
+                              width: 320,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  image: const DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: NetworkImage(
+                                        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+                                      ))),
+                            ),
                           ),
                           const Positioned(
                               right: 10,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:realestate/screens/constants/mycolors.dart';
 import 'package:realestate/screens/pages/notification_screen.dart';
+import 'package:realestate/screens/pages/settings_screen.dart';
 
 import 'cart_screen.dart';
 import 'home_screen.dart';
@@ -24,6 +25,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     MembersScreen(),
     CartScreen(),
     NotificationScreen(),
+    SettingScreen(),
   ];
 
 
@@ -43,7 +45,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             color: Colors.grey,
             activeColor: primaryColor,
             tabBackgroundColor: Colors.grey.shade300,
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(10.0),
             onTabChange: (index) {
               setState(() {
                 _currentIndex = index;
@@ -66,6 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 icon: Icons.notifications_none_sharp,
                 text: "Notifications",
               ),
+              GButton(icon: Icons.settings, text: "Settings",)
             ],
           ),
         ),
