@@ -22,8 +22,8 @@ class _InfoScreenState extends State<InfoScreen> {
               padding: const EdgeInsets.only(top: 80),
               child: ClipOval(
                 child: Container(
-                  height: 250,
-                  width: 350,
+                  height: 220,
+                  width: 310,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.horizontal(
                       left: Radius.elliptical(40, 20),
@@ -95,7 +95,7 @@ class _InfoScreenState extends State<InfoScreen> {
   Widget buildContainer(int index, String label) {
     return Container(
       height: 45,
-      width: 380,
+      width: 310,
       margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: selectedContainerIndex == index ? const Color(0xff232c64) : Colors.transparent,

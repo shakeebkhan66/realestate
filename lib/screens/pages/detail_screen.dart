@@ -25,7 +25,7 @@ class _HomeScreenState extends State<DetailScreen> {
                     child: Column(
                       children: [
                         Container(
-                          height: 300,
+                          height: 350,
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
                               image: const DecorationImage(

@@ -4,6 +4,8 @@ import 'package:realestate/screens/constants/mycolors.dart';
 import 'package:realestate/screens/pages/welcome_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
+import 'first_screen.dart';
+
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -15,7 +17,7 @@ class SplashScreen extends StatelessWidget {
           child: AnimatedSplashScreen(
               duration: 4000,
               splash: Image.asset("assets/images/logo.png", height: 1000,),
-              nextScreen: const WelcomeScreen(),
+              nextScreen: const InfoScreen(),
               splashTransition: SplashTransition.scaleTransition,
               pageTransitionType: PageTransitionType.fade,
               curve: Curves.easeIn,

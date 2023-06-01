@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../constants/mycolors.dart';
 
@@ -44,10 +45,7 @@ class MembersScreen extends StatelessWidget {
                         ),
                         hintText: "Search...",
                         hintStyle: TextStyle(color: Colors.grey.shade500),
-                        suffixIcon: Icon(
-                          Icons.accessibility,
-                          color: Colors.grey.shade500,
-                        ),
+                        suffixIcon: const Icon(FontAwesomeIcons.sliders),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -187,6 +185,7 @@ class MembersScreen extends StatelessWidget {
                   );
                 },
               ),
+              const SizedBox(height: 20.0),
             ],
           ),
         ));
