@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:realestate/screens/pages/otpmobile_screen.dart';
 import 'package:realestate/screens/pages/signup_screen.dart';
 import 'package:realestate/screens/pages/splash_screen.dart';
 import 'package:realestate/screens/pages/welcome_screen.dart';
@@ -162,7 +163,7 @@ class _SigninScreenState extends State<SigninScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const WelcomeScreen()));
+                        builder: (context) => const OtpMobileScreen()));
               },
               style: ElevatedButton.styleFrom(
                   minimumSize: const Size(250, 50),

@@ -3,6 +3,9 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:realestate/screens/constants/mycolors.dart';
+import 'package:realestate/screens/pages/contact_screen.dart';
+import 'package:realestate/screens/pages/edit_profile_screen.dart';
+import 'package:realestate/screens/pages/terms_screen.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -71,26 +74,19 @@ class _SettingScreenState extends State<SettingScreen> {
                   color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
-                        FontAwesomeIcons.moon,
-                        size: 20.0,
-                        color: Colors.black87,
-                      ),
+                child: ListTile(
+                    leading: const Icon(
+                      FontAwesomeIcons.moon,
+                      size: 20.0,
+                      color: Colors.black87,
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
-                        "Dark mode",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
-                      ),
+                    title: const Text(
+                      "Dark mode",
+                      style: TextStyle(
+                          color: Colors.black87, fontWeight: FontWeight.w400),
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 125.0),
+                    trailing: SizedBox(
+                      width: 60.0,
                       child: FlutterSwitch(
                         width: 60.0,
                         height: 35.0,
@@ -108,9 +104,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           });
                         },
                       ),
-                    )
-                  ],
-                )),
+                    ))),
             Container(
                 height: 50.0,
                 width: MediaQuery.of(context).size.width,
@@ -120,26 +114,19 @@ class _SettingScreenState extends State<SettingScreen> {
                   color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
-                        FontAwesomeIcons.bell,
-                        size: 20.0,
-                        color: Colors.black87,
-                      ),
+                child: ListTile(
+                    leading: const Icon(
+                      FontAwesomeIcons.bell,
+                      size: 20.0,
+                      color: Colors.black87,
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
-                        "Push notifications",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
-                      ),
+                    title: const Text(
+                      "Push notifications",
+                      style: TextStyle(
+                          color: Colors.black87, fontWeight: FontWeight.w400),
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 75.0),
+                    trailing: SizedBox(
+                      width: 60.0,
                       child: FlutterSwitch(
                         width: 60.0,
                         height: 35.0,
@@ -157,9 +144,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           });
                         },
                       ),
-                    )
-                  ],
-                )),
+                    ))),
             Container(
                 height: 50.0,
                 width: MediaQuery.of(context).size.width,
@@ -169,35 +154,24 @@ class _SettingScreenState extends State<SettingScreen> {
                   color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
-                        FontAwesomeIcons.flag,
-                        size: 20.0,
+                child: ListTile(
+                    leading: const Icon(
+                      FontAwesomeIcons.flag,
+                      size: 20.0,
+                      color: Colors.black87,
+                    ),
+                    title: const Text(
+                      "Language",
+                      style: TextStyle(
+                          color: Colors.black87, fontWeight: FontWeight.w400),
+                    ),
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.arrow_forward_ios,
                         color: Colors.black87,
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
-                        "Language",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    Container(
-                        padding: const EdgeInsets.only(left: 138.0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black87,
-                          ),
-                        ))
-                  ],
-                )),
+                    ))),
 
             // TODO ACCOUNT
             Container(
@@ -212,43 +186,68 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
               ),
             ),
-            Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width,
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const EditProfileScreen()));
+              },
+              child: Container(
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 23.0, vertical: 7.0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: ListTile(
+                      leading: const Icon(
                         Icons.person,
                         size: 20.0,
                         color: Colors.black87,
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
+                      title: const Text(
                         "Manage Account",
                         style: TextStyle(
                             color: Colors.black87, fontWeight: FontWeight.w400),
                       ),
+                      trailing: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.black87,
+                        ),
+                      ))),
+            ),
+            Container(
+                height: 50.0,
+                width: MediaQuery.of(context).size.width,
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.security,
+                    size: 20.0,
+                    color: Colors.black87,
+                  ),
+                  title: const Text(
+                    "Password",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.w400),
+                  ),
+                  trailing: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.black87,
                     ),
-                    Container(
-                        padding: const EdgeInsets.only(left: 90.0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black87,
-                          ),
-                        ))
-                  ],
+                  ),
                 )),
             Container(
                 height: 50.0,
@@ -259,73 +258,24 @@ class _SettingScreenState extends State<SettingScreen> {
                   color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
-                        Icons.security,
-                        size: 20.0,
+                child: ListTile(
+                    leading: const Icon(
+                      FontAwesomeIcons.share,
+                      size: 20.0,
+                      color: Colors.black87,
+                    ),
+                    title: const Text(
+                      "Share profile",
+                      style: TextStyle(
+                          color: Colors.black87, fontWeight: FontWeight.w400),
+                    ),
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.arrow_forward_ios,
                         color: Colors.black87,
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
-                        "Password",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    Container(
-                        padding: const EdgeInsets.only(left: 135.0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black87,
-                          ),
-                        ))
-                  ],
-                )),
-            Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width,
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
-                        FontAwesomeIcons.share,
-                        size: 20.0,
-                        color: Colors.black87,
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
-                        "Share profile",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    Container(
-                        padding: const EdgeInsets.only(left: 115.0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black87,
-                          ),
-                        ))
-                  ],
-                )),
+                    ))),
 
             // TODO ABOUT
             Container(
@@ -340,91 +290,84 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
               ),
             ),
-            Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width,
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ContactScreen()));
+              },
+              child: Container(
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 23.0, vertical: 7.0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: ListTile(
+                      leading: const Icon(
                         Icons.feedback_outlined,
                         size: 20.0,
                         color: Colors.black87,
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
+                      title: const Text(
                         "Feedback",
                         style: TextStyle(
                             color: Colors.black87, fontWeight: FontWeight.w400),
                       ),
-                    ),
-                    Container(
-                        padding: const EdgeInsets.only(left: 132.0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black87,
-                          ),
-                        ))
-                  ],
-                )),
-            Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width,
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Icon(
+                      trailing: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.black87,
+                        ),
+                      ))),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TermScreen()));
+              },
+              child: Container(
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 23.0, vertical: 7.0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: ListTile(
+                      leading: const Icon(
                         Icons.help_outline,
                         size: 20.0,
                         color: Colors.black87,
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: const Text(
-                        "Help center",
+                      title: const Text(
+                        "Terms & Condition",
                         style: TextStyle(
                             color: Colors.black87, fontWeight: FontWeight.w400),
                       ),
-                    ),
-                    Container(
-                        padding: const EdgeInsets.only(left: 120.0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black87,
-                          ),
-                        ))
-                  ],
-                )),
+                      trailing: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.black87,
+                        ),
+                      ))),
+            ),
 
-
-            const SizedBox(height: 20.0,),
-
+            const SizedBox(
+              height: 20.0,
+            ),
 
             // TODO SWITCH BUTTON
             Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: MaterialButton(
                 onPressed: () {},
                 height: 45,
@@ -440,13 +383,14 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
             ),
 
-            const SizedBox(height: 10.0,),
+            const SizedBox(
+              height: 10.0,
+            ),
 
             Container(
               height: 40.0,
               width: MediaQuery.of(context).size.width,
-              margin:
-                  const EdgeInsets.symmetric(horizontal: 23.0),
+              margin: const EdgeInsets.symmetric(horizontal: 23.0),
               decoration: BoxDecoration(
                 color: Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(5.0),
@@ -471,7 +415,9 @@ class _SettingScreenState extends State<SettingScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 20.0,),
+            const SizedBox(
+              height: 20.0,
+            ),
           ],
         ),
       ),
