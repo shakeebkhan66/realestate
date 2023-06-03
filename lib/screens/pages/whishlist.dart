@@ -39,7 +39,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               height: 10.0,
             ),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
@@ -49,8 +49,8 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               child: Row(
                 children: [
                   Container(
-                    height: 140.0,
-                    width: 140.0,
+                    height: 120.0,
+                    width: 120.0,
                     margin: const EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
@@ -71,7 +71,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           "House",
                           style: TextStyle(
                               color: Colors.redAccent,
-                              fontSize: 17.0,
+                              fontSize: 15.0,
                               letterSpacing: 1.3,
                               fontWeight: FontWeight.w500),
                         ),
@@ -83,7 +83,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           style: TextStyle(
                               color: Colors.black87,
                               letterSpacing: 1.3,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -154,7 +154,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
             ),
             const SizedBox(height: 6.0,),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
@@ -164,8 +164,8 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               child: Row(
                 children: [
                   Container(
-                    height: 140.0,
-                    width: 140.0,
+                    height: 120.0,
+                    width: 120.0,
                     margin: const EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
@@ -186,7 +186,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           "House",
                           style: TextStyle(
                               color: Colors.redAccent,
-                              fontSize: 17.0,
+                              fontSize: 15.0,
                               letterSpacing: 1.3,
                               fontWeight: FontWeight.w500),
                         ),
@@ -198,7 +198,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           style: TextStyle(
                               color: Colors.black87,
                               letterSpacing: 1.3,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -269,7 +269,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
             ),
             const SizedBox(height: 6.0,),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
@@ -279,8 +279,8 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               child: Row(
                 children: [
                   Container(
-                    height: 140.0,
-                    width: 140.0,
+                    height: 120.0,
+                    width: 120.0,
                     margin: const EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
@@ -301,7 +301,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           "House",
                           style: TextStyle(
                               color: Colors.redAccent,
-                              fontSize: 17.0,
+                              fontSize: 15.0,
                               letterSpacing: 1.3,
                               fontWeight: FontWeight.w500),
                         ),
@@ -313,7 +313,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           style: TextStyle(
                               color: Colors.black87,
                               letterSpacing: 1.3,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -384,7 +384,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
             ),
             const SizedBox(height: 6.0,),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
@@ -394,8 +394,8 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               child: Row(
                 children: [
                   Container(
-                    height: 140.0,
-                    width: 140.0,
+                    height: 120.0,
+                    width: 120.0,
                     margin: const EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
@@ -416,7 +416,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           "House",
                           style: TextStyle(
                               color: Colors.redAccent,
-                              fontSize: 17.0,
+                              fontSize: 15.0,
                               letterSpacing: 1.3,
                               fontWeight: FontWeight.w500),
                         ),
@@ -428,7 +428,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           style: TextStyle(
                               color: Colors.black87,
                               letterSpacing: 1.3,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -499,7 +499,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
             ),
             const SizedBox(height: 6.0,),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
@@ -509,8 +509,8 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               child: Row(
                 children: [
                   Container(
-                    height: 140.0,
-                    width: 140.0,
+                    height: 120.0,
+                    width: 120.0,
                     margin: const EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
@@ -531,7 +531,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           "House",
                           style: TextStyle(
                               color: Colors.redAccent,
-                              fontSize: 17.0,
+                              fontSize: 15.0,
                               letterSpacing: 1.3,
                               fontWeight: FontWeight.w500),
                         ),
@@ -543,7 +543,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           style: TextStyle(
                               color: Colors.black87,
                               letterSpacing: 1.3,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -614,7 +614,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
             ),
             const SizedBox(height: 6.0,),
             Container(
-              height: 150.0,
+              height: 130.0,
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
@@ -624,8 +624,8 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
               child: Row(
                 children: [
                   Container(
-                    height: 140.0,
-                    width: 140.0,
+                    height: 120.0,
+                    width: 120.0,
                     margin: const EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
@@ -646,7 +646,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           "House",
                           style: TextStyle(
                               color: Colors.redAccent,
-                              fontSize: 17.0,
+                              fontSize: 15.0,
                               letterSpacing: 1.3,
                               fontWeight: FontWeight.w500),
                         ),
@@ -658,7 +658,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                           style: TextStyle(
                               color: Colors.black87,
                               letterSpacing: 1.3,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500),
                         ),
                       ),

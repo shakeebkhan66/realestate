@@ -32,6 +32,7 @@ class _ContactScreenState extends State<ContactScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      backgroundColor: whiteColor,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,9 +42,10 @@ class _ContactScreenState extends State<ContactScreen>
               child: Container(
                 height: 470,
                 width: 350,
+                margin: const EdgeInsets.symmetric(horizontal: 25.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: const Color(0xffe3e3e3),
+                  color: Colors.grey.shade200,
                 ),
                 child: Column(
                   children: [
@@ -54,7 +56,7 @@ class _ContactScreenState extends State<ContactScreen>
                       child: Text(
                         'Get in touch',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 19,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
@@ -133,7 +135,7 @@ class _ContactScreenState extends State<ContactScreen>
                             });
                           },
                           child: Container(
-                            height: 40,
+                            height: 30,
                             width: MediaQuery.of(context).size.width,
                             margin: const EdgeInsets.symmetric(horizontal: 90.0, vertical: 25.0),
                             decoration: BoxDecoration(

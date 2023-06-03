@@ -14,144 +14,100 @@ class _OtpMobileScreenState extends State<OtpMobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
+        backgroundColor: whiteColor,
+        body: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                    height: 380,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.only(top: 280.0, left: 10.0),
-                          child: Text(
-                            'Verification',
-                            style: GoogleFonts.arsenal(
-                              fontSize: 26,
-                              letterSpacing: 1.4,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Text(
-                            'Code',
-                            style: GoogleFonts.arsenal(
-                              fontSize: 23,
-                              letterSpacing: 1.4,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                    right: 0,
-                    top: 50,
-                    child: Image.asset(
-                      'assets/images/otp.png',
-                      height: 200,
-                      width: 210,
-                    ),
-                  ),
-                ],
+              Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.only(top: 150),
+                child: Image.asset(
+                  "assets/images/locked.png",
+                  height: 90,
+                  width: 90,
+                ),
               ),
-              const Divider(
-                thickness: 0.1,
-                color: Colors.grey,
+              const SizedBox(
+                height: 60.0,
               ),
               Container(
-                height: 60,
-                width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(
-                  color: Color(0xfff8fafb),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(top: 10, left: 20),
-                  child: Text(
-                    'We will send you a one-time password to \nyour Mobile Number! ',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        color: Color(0xffbfc1c2)),
-                  ),
+                child: const Text(
+                  "OTP Verification",
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 20,
+                      letterSpacing: 1.3,
+                      fontWeight: FontWeight.w600),
                 ),
               ),
-              const Divider(
-                thickness: 0.1,
-                color: Colors.grey,
+              const SizedBox(
+                height: 15.0,
+              ),
+              Container(
+                child: const Text(
+                  "We will send you a one-time password \n               to this mobile number",
+                  style: TextStyle(
+                      color: Colors.black87, fontSize: 15, letterSpacing: 1.0),
+                ),
               ),
               const SizedBox(
-                height: 15,
+                height: 20.0,
               ),
-              const Text(
-                'Enter Mobile Number',
-                style: TextStyle(fontSize: 15, color: Colors.grey),
+              Container(
+                child: Text(
+                  "Enter Mobile Number",
+                  style: TextStyle(
+                      color: Colors.grey.shade600,
+                      letterSpacing: -0.8,
+                      fontSize: 14),
+                ),
               ),
               const SizedBox(
-                height: 30,
+                height: 15.0,
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 40, left: 40, bottom: 20),
-                child: TextField(
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.number,
-                  cursorColor: Colors.grey,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                      borderSide: BorderSide.none,
-                    ),
-                    hintText: 'Enter Phone Number',
-                    filled: true,
-                    fillColor: Colors.grey,
-                  ),
+                padding: const EdgeInsets.symmetric(horizontal: 90.0),
+                child: SizedBox(
+                  height: 45.0,
+                  child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        fillColor: Colors.grey.shade200,
+                        filled: true,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(6.0),
+                            borderSide: BorderSide.none),
+                        prefixText: "      ",
+                        hintText: "+00 915 224 654",
+                        hintStyle: const TextStyle(
+                            color: Colors.black87,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w600),
+                      )),
                 ),
               ),
-              const Divider(
-                thickness: 0.08,
-                color: Colors.grey,
+              const SizedBox(
+                height: 45.0,
               ),
-              const SizedBox(height: 25),
-              ElevatedButton(
+              MaterialButton(
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const OtpScreen()));
                 },
-                style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(180, 45),
-                    backgroundColor: primaryColor),
-                child: const Text(
-                  'Get OTP',
-                  style: TextStyle(fontSize: 15, color: whiteColor, fontWeight: FontWeight.bold),
+                color: primaryColor,
+                minWidth: 180,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              const Divider(
-                thickness: 0.08,
-                color: Colors.grey,
-              ),
+                child: const Text(
+                  "Get OTP",
+                  style: TextStyle(color: whiteColor),
+                ),
+              )
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

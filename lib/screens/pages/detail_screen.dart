@@ -306,6 +306,8 @@ class _HomeScreenState extends State<DetailScreen> {
                 ),
               ),
 
+              const SizedBox(height: 20.0,),
+
             ],
           ),
         ),

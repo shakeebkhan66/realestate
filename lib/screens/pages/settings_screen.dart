@@ -21,7 +21,7 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(
@@ -71,30 +71,31 @@ class _SettingScreenState extends State<SettingScreen> {
                 margin:
                     const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: ListTile(
                     leading: const Icon(
                       FontAwesomeIcons.moon,
-                      size: 20.0,
+                      size: 15.0,
                       color: Colors.black87,
                     ),
                     title: const Text(
                       "Dark mode",
                       style: TextStyle(
-                          color: Colors.black87, fontWeight: FontWeight.w400),
+                          color: Colors.black87, fontSize: 12.0),
                     ),
                     trailing: SizedBox(
                       width: 60.0,
                       child: FlutterSwitch(
-                        width: 60.0,
-                        height: 35.0,
-                        valueFontSize: 10.0,
-                        toggleSize: 15.0,
+                        width: 50.0,
+                        height: 30.0,
+                        valueFontSize: 7.0,
+                        toggleSize: 10.0,
                         value: themeStatus,
                         activeColor: primaryColor,
                         activeTextColor: whiteColor,
+                        inactiveColor: Colors.grey.shade300,
                         borderRadius: 30.0,
                         padding: 8.0,
                         showOnOff: true,
@@ -111,30 +112,31 @@ class _SettingScreenState extends State<SettingScreen> {
                 margin:
                     const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: ListTile(
                     leading: const Icon(
                       FontAwesomeIcons.bell,
-                      size: 20.0,
+                      size: 15.0,
                       color: Colors.black87,
                     ),
                     title: const Text(
                       "Push notifications",
                       style: TextStyle(
-                          color: Colors.black87, fontWeight: FontWeight.w400),
+                          color: Colors.black87, fontSize: 12.0),
                     ),
                     trailing: SizedBox(
                       width: 60.0,
                       child: FlutterSwitch(
-                        width: 60.0,
-                        height: 35.0,
-                        valueFontSize: 10.0,
-                        toggleSize: 15.0,
+                        width: 50.0,
+                        height: 30.0,
+                        valueFontSize: 7.0,
+                        toggleSize: 10.0,
                         value: notifyStatus,
                         activeColor: primaryColor,
                         activeTextColor: whiteColor,
+                        inactiveColor: Colors.grey.shade300,
                         borderRadius: 30.0,
                         padding: 8.0,
                         showOnOff: true,
@@ -151,25 +153,26 @@ class _SettingScreenState extends State<SettingScreen> {
                 margin:
                     const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: ListTile(
                     leading: const Icon(
                       FontAwesomeIcons.flag,
-                      size: 20.0,
+                      size: 15.0,
                       color: Colors.black87,
                     ),
                     title: const Text(
                       "Language",
                       style: TextStyle(
-                          color: Colors.black87, fontWeight: FontWeight.w400),
+                          color: Colors.black87, fontSize: 12.0),
                     ),
                     trailing: IconButton(
                       onPressed: () {},
                       icon: const Icon(
                         Icons.arrow_forward_ios,
                         color: Colors.black87,
+                        size: 15.0,
                       ),
                     ))),
 
@@ -199,25 +202,26 @@ class _SettingScreenState extends State<SettingScreen> {
                   margin: const EdgeInsets.symmetric(
                       horizontal: 23.0, vertical: 7.0),
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(5.0),
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: ListTile(
                       leading: const Icon(
                         Icons.person,
-                        size: 20.0,
+                        size: 15.0,
                         color: Colors.black87,
                       ),
                       title: const Text(
                         "Manage Account",
                         style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
+                            color: Colors.black87, fontSize: 12.0),
                       ),
                       trailing: IconButton(
                         onPressed: () {},
                         icon: const Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.black87,
+                          size: 15.0,
                         ),
                       ))),
             ),
@@ -227,25 +231,26 @@ class _SettingScreenState extends State<SettingScreen> {
                 margin:
                     const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: ListTile(
                   leading: const Icon(
                     Icons.security,
-                    size: 20.0,
+                    size: 15.0,
                     color: Colors.black87,
                   ),
                   title: const Text(
                     "Password",
                     style: TextStyle(
-                        color: Colors.black87, fontWeight: FontWeight.w400),
+                        color: Colors.black87, fontSize: 12.0),
                   ),
                   trailing: IconButton(
                     onPressed: () {},
                     icon: const Icon(
                       Icons.arrow_forward_ios,
                       color: Colors.black87,
+                      size: 15.0,
                     ),
                   ),
                 )),
@@ -255,25 +260,26 @@ class _SettingScreenState extends State<SettingScreen> {
                 margin:
                     const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(5.0),
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: ListTile(
                     leading: const Icon(
                       FontAwesomeIcons.share,
-                      size: 20.0,
+                      size: 15.0,
                       color: Colors.black87,
                     ),
                     title: const Text(
                       "Share profile",
                       style: TextStyle(
-                          color: Colors.black87, fontWeight: FontWeight.w400),
+                          color: Colors.black87, fontSize: 12.0),
                     ),
                     trailing: IconButton(
                       onPressed: () {},
                       icon: const Icon(
                         Icons.arrow_forward_ios,
                         color: Colors.black87,
+                        size: 15.0,
                       ),
                     ))),
 
@@ -303,25 +309,26 @@ class _SettingScreenState extends State<SettingScreen> {
                   margin: const EdgeInsets.symmetric(
                       horizontal: 23.0, vertical: 7.0),
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(5.0),
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: ListTile(
                       leading: const Icon(
                         Icons.feedback_outlined,
-                        size: 20.0,
+                        size: 15.0,
                         color: Colors.black87,
                       ),
                       title: const Text(
                         "Feedback",
                         style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
+                            color: Colors.black87, fontSize: 12.0),
                       ),
                       trailing: IconButton(
                         onPressed: () {},
                         icon: const Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.black87,
+                          size: 15.0,
                         ),
                       ))),
             ),
@@ -338,25 +345,26 @@ class _SettingScreenState extends State<SettingScreen> {
                   margin: const EdgeInsets.symmetric(
                       horizontal: 23.0, vertical: 7.0),
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(5.0),
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: ListTile(
                       leading: const Icon(
                         Icons.help_outline,
-                        size: 20.0,
+                        size: 15.0,
                         color: Colors.black87,
                       ),
                       title: const Text(
                         "Terms & Condition",
                         style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.w400),
+                            color: Colors.black87, fontSize: 12.0),
                       ),
                       trailing: IconButton(
                         onPressed: () {},
                         icon: const Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.black87,
+                          size: 15.0,
                         ),
                       ))),
             ),
