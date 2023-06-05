@@ -101,7 +101,7 @@ class _WhishlistScreenState extends State<WhishlistScreen> {
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(left: 17.0, top: 17.0),
+                        padding: const EdgeInsets.only(left: 17.0, top: 5.0),
                         child: Row(
                           children: [
                             Row(

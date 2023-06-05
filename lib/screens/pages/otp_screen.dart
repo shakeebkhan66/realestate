@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:realestate/screens/constants/mycolors.dart';
 import 'package:realestate/screens/pages/welcome_screen.dart';
-import 'edit_profile_screen.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
@@ -46,24 +44,25 @@ class _OtpScreenState extends State<OtpScreen> {
                 height: 25.0,
               ),
               Container(
-                child: RichText(
-                  text: const TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "Enter the OTP sent to",
-                        style: TextStyle(
-                            color: Colors.black87, fontSize: 14),
-                      ),
-                      WidgetSpan(child: SizedBox(width: 5.0,)),
-                      TextSpan(
-                        text: "+00 915 224 654",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 14),
-                      )
-                    ]
+                  child: RichText(
+                text: const TextSpan(children: [
+                  TextSpan(
+                    text: "Enter the OTP sent to",
+                    style: TextStyle(color: Colors.black87, fontSize: 14),
                   ),
-                )
-              ),
+                  WidgetSpan(
+                      child: SizedBox(
+                    width: 5.0,
+                  )),
+                  TextSpan(
+                    text: "+00 915 224 654",
+                    style: TextStyle(
+                        color: Colors.black87,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14),
+                  )
+                ]),
+              )),
               const SizedBox(
                 height: 30.0,
               ),
@@ -88,7 +87,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                   borderSide: BorderSide.none),
                               prefixText: " ",
                               hintText: "0",
-                              hintStyle: TextStyle(
+                              hintStyle: const TextStyle(
                                   color: Colors.black87,
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold)),
@@ -195,7 +194,12 @@ class _OtpScreenState extends State<OtpScreen> {
                 height: 45.0,
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const WelcomeScreen()));
+                },
                 color: primaryColor,
                 minWidth: 180,
                 shape: RoundedRectangleBorder(

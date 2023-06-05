@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:realestate/screens/constants/mycolors.dart';
 import 'package:realestate/screens/pages/contact_screen.dart';
 import 'package:realestate/screens/pages/edit_profile_screen.dart';
+import 'package:realestate/screens/pages/myprofile_screen.dart';
 import 'package:realestate/screens/pages/terms_screen.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -194,7 +195,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const EditProfileScreen()));
+                        builder: (context) => const MyProfileScreen()));
               },
               child: Container(
                   height: 50.0,
@@ -225,35 +226,43 @@ class _SettingScreenState extends State<SettingScreen> {
                         ),
                       ))),
             ),
-            Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width,
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                child: ListTile(
-                  leading: const Icon(
-                    Icons.security,
-                    size: 15.0,
-                    color: Colors.black87,
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const EditProfileScreen()));
+              },
+              child: Container(
+                  height: 50.0,
+                  width: MediaQuery.of(context).size.width,
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 23.0, vertical: 7.0),
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(8.0),
                   ),
-                  title: const Text(
-                    "Password",
-                    style: TextStyle(
-                        color: Colors.black87, fontSize: 12.0),
-                  ),
-                  trailing: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.black87,
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.security,
                       size: 15.0,
+                      color: Colors.black87,
                     ),
-                  ),
-                )),
+                    title: const Text(
+                      "Password",
+                      style: TextStyle(
+                          color: Colors.black87, fontSize: 12.0),
+                    ),
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.black87,
+                        size: 15.0,
+                      ),
+                    ),
+                  )),
+            ),
             Container(
                 height: 50.0,
                 width: MediaQuery.of(context).size.width,

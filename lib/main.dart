@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:realestate/screens/pages/myprofile_screen.dart';
 import 'package:realestate/screens/pages/splash_screen.dart';
 
 void main() {
